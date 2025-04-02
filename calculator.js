@@ -21,6 +21,13 @@ class Calculator {
         }
         return a / b;
     }
+
+    power(base, exponent) {
+        if (!Number.isInteger(exponent)) {
+            throw new Error('Exponent must be an integer');
+        }
+        return Math.pow(base, exponent);
+    }
 }
 
 export default Calculator;
